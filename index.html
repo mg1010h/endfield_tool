@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>엔드필드 기질 파밍</title>
+  <link rel="stylesheet" href="css/style.css"> </head>
+<body>
+  <div class="container">
+    
+    <div id="view-main">
+      <h1>엔드필드 기질 파밍</h1>
+      
+      <div class="section">
+        <h2>에너지 응집점</h2>
+        <div id="dungeon-buttons"></div>
+      </div>
+
+      <div class="section">
+        <h2>보유 기질 불러오기</h2>
+        <p style="font-size: 14px; color: #bbb;">코드를 통해 보유 현황을 불러올 수 있습니다.</p>
+
+        <div class="code-box">
+          <button class="btn-secondary" id="btn-export">코드 발급</button>
+          <input type="text" id="deck-code-input" placeholder="코드 붙여넣기">
+          <button id="btn-import">적용</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>기질 보유 현황</h2>
+        <p style="font-size: 14px; color: #bbb;">보유 중인 기질을 체크해주세요.</p>
+        
+        <div id="filter-container">
+          <select id="filter-base"><option value="">-- [기초 속성] --</option></select>
+          <select id="filter-extra"><option value="">-- [추가 속성] --</option></select>
+          <select id="filter-skill"><option value="">-- [스킬 속성] --</option></select>
+          <button id="btn-reset-filter" style="padding: 8px;">초기화</button>
+        </div>
+
+        <div class="weapon-grid" id="all-weapons"></div>
+      </div>
+    </div>
+
+    <div id="view-dungeon" class="hidden">
+      <button id="btn-home" style="margin-bottom: 20px;">⬅ 이전 화면</button>
+      <h1 id="dungeon-title">name</h1>
+      
+      <div class="section" style="border-bottom: none;">
+        <h2>추천 각인</h2>
+        <p>유효 기질 <strong>2개 이상</strong>을 노릴 수 있는 각인 조합입니다.</p>
+        <table>
+          <thead>
+            <tr>
+              <th width="20%">기초 속성</th>
+              <th width="20%">확정 속성</th>
+              <th width="60%">획득 가능 기질</th>
+            </tr>
+          </thead>
+          <tbody id="result-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="view-farming" class="hidden">     
+      <h1 id="farming-title">기질 파밍 중</h1>
+      
+      <div class="section">
+        <h3>적용 중인 각인 세팅</h3>
+        <p id="farming-setting-desc" style="font-size: 16px; background: #3c3c4a; padding: 15px; border-radius: 8px; border: 1px solid #555;"></p>
+      </div>
+
+      <div class="section" style="border-bottom: none;">
+        <h3>목표 기질 (획득시 클릭해서 체크)</h3>
+        <p style="font-size: 14px; color: #bbb;">얻을 수 있는 유효 기질 목록</p>
+        <div class="weapon-grid" id="farming-weapons-grid"></div>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #444;">
+        <button id="btn-end-farming" class="btn-danger-outline">
+          파밍 종료
+        </button>
+      </div>
+    </div>
+
+    <div id="custom-modal" class="modal-overlay hidden">
+      <div class="modal-box">
+        <h3 id="modal-title">알림</h3>
+        <p id="modal-message">메시지 내용</p>
+        <div class="modal-buttons">
+          <button id="modal-btn-cancel" class="btn-cancel hidden">취소</button>
+          <button id="modal-btn-confirm" class="btn-confirm">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="text-align: center; margin-top: 50px; padding: 20px 10px; color: #777; font-size: 12px; border-top: 1px dashed #444; line-height: 1.8;">
+    <p style="margin: 0;">© 2026. mg1010h All Rights Reserved.</p>
+    
+    <p style="margin: 5px 0;">
+      <strong>비공식 팬메이드 도구:</strong> 본 사이트는 '명일방주: 엔드필드' 유저의 편의를 위해 제작된 <strong>비공식 도구</strong>입니다. 사용자가 입력하거나 선택한 모든 데이터는 서버로 전송되지 않으며, 오직 사용자의 브라우저에만 저장됩니다.
+    </p>
+
+    <p style="margin: 5px 0;">
+      <strong>저작권 안내:</strong> '명일방주: 엔드필드'의 이름, 로고, 이미지, 게임 내 데이터 등 모든 지적재산권은 <strong>Hypergryph 및 Gryphline</strong>, 그리고 관련 권리자에게 있습니다.
+    </p>
+
+    <p style="margin: 5px 0;">
+      <strong>면책 조항:</strong> 본 도구의 계산 결과는 실제와 차이가 있을 수 있으며, 100% 정확성을 보장하지 않습니다. 본 도구의 사용으로 인해 발생하는 결과에 대해 개발자는 어떠한 법적 책임도 지지 않습니다.
+    </p>
+    
+    <p style="margin-top: 10px; font-size: 11px;">
+      문의 및 피드백: <a href="https://github.com/mg1010h" target="_blank" style="color: #999; text-decoration: underline;">GitHub Repository</a>
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  </body>
+</html>

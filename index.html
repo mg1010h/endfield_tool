@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>엔드필드 기질 파밍</title>
   <link rel="stylesheet" href="css/style.css"> </head>
 <body>
@@ -34,6 +35,10 @@
           <select id="filter-base"><option value="">-- [기초 속성] --</option></select>
           <select id="filter-extra"><option value="">-- [추가 속성] --</option></select>
           <select id="filter-skill"><option value="">-- [스킬 속성] --</option></select>
+          <select id="filter-star-weight">
+            <option value="1" selected>파밍 효율 우선</option>
+            <option value="20">⭐ 기질 우선</option>
+          </select>
           <button id="btn-reset-filter" style="padding: 8px;">초기화</button>
         </div>
 
@@ -116,5 +121,4 @@
 
   <script src="js/main.js"></script>
   </body>
-
 </html>

@@ -1,6 +1,10 @@
+/* ==========================================================================
+   1. Base & Reset
+   ========================================================================== */
 html, body {
   overflow-x: hidden;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -14,11 +18,14 @@ body {
   margin: 0;
 }
 
-h1,h2,h3 {
+h1, h2, h3 {
   color: #ffffff;
   margin-top: 0;
 }
 
+/* ==========================================================================
+   2. Layout & Containers
+   ========================================================================== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -34,8 +41,37 @@ h1,h2,h3 {
   border-bottom: 1px solid #444;
 }
 
+.section.no-border {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   3. Typography & Utility Classes
+   ========================================================================== */
+.text-sm { font-size: 14px; }
+.text-xs { font-size: 11px; }
+.text-muted { color: #bbb; }
+.text-center { text-align: center; }
+
+.m-0 { margin: 0; }
+.my-5 { margin-top: 5px; margin-bottom: 5px; }
+.mt-10 { margin-top: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.p-8 { padding: 8px; }
+
 .hidden {
   display: none !important;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ==========================================================================
+   4. Buttons & Forms
+   ========================================================================== */
+button, select {
+  touch-action: manipulation;
 }
 
 button {
@@ -89,6 +125,35 @@ button:hover {
   background: rgba(229, 115, 115, 0.1);
 }
 
+.code-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  background: #1e1e24;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 6px;
+}
+
+select {
+  padding: 8px;
+  background: #3c3c4a;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+  outline: none;
+  margin-right: 10px;
+}
+
+/* ==========================================================================
+   5. Components
+   ========================================================================== */
+/* Dungeon Buttons */
 #dungeon-buttons {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -120,31 +185,7 @@ button:hover {
   background: #4a4a5a;
 }
 
-.code-box {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-input[type="text"] {
-  flex: 1;
-  padding: 10px;
-  background: #1e1e24;
-  color: white;
-  border: 1px solid #555;
-  border-radius: 6px;
-}
-
-select {
-  padding: 8px;
-  background: #3c3c4a;
-  color: white;
-  border: 1px solid #555;
-  border-radius: 4px;
-  outline: none;
-  margin-right: 10px;
-}
-
+/* Weapon Cards */
 .weapon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -165,6 +206,7 @@ select {
   transition: all 0.2s;
   font-size: 13px;
   user-select: none;
+  touch-action: manipulation;
 }
 
 .weapon-card:hover {
@@ -205,30 +247,182 @@ select {
   margin-top: 8px;
 }
 
-.rarity-6 {
-  color: #ff9800 !important;
+.weapon-card .stats span {
+  display: block;
 }
 
-.rarity-5 {
-  color: #ffd54f !important;
+/* Star Badges & Buttons */
+.star-btn { 
+  position: absolute; 
+  bottom: 6px; right: 8px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  user-select: none;
+  z-index: 2; 
+  transition: 0.2s;
 }
 
-.rarity-4 {
-  color: #ce93d8 !important;
+.star-btn.inactive { filter: grayscale(100%) opacity(0.3); }
+.star-btn.active { filter: grayscale(0%) opacity(1); text-shadow: 0 0 5px rgba(255,202,40,0.8); }
+
+.star-badge {
+  background-color: rgba(255, 202, 40, 0.15); 
+  color: #ffca28;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 202, 40, 0.4);
+  margin: 0;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* Rarity Colors */
+.rarity-6 { color: #ff9800 !important; }
+.rarity-5 { color: #ffd54f !important; }
+.rarity-4 { color: #ce93d8 !important; }
+
+/* Table Elements */
+table {
   width: 100%;
-  height: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #3c3c4a;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #555;
+}
+
+th {
+  background-color: #555;
+  color: #ffca28;
+  text-align: center;
+}
+
+#result-tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#result-tbody tr:hover {
+  background-color: #4a4a5a;
+}
+
+.target-weapon {
+  display: inline-block;
+  background: #4a4a5a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 2px;
+  font-size: 12px;
+  border: 1px solid #777;
+}
+
+.target-weapon.starred-glow {
+  border-color: #ffca28;
+  background-color: rgba(255, 202, 40, 0.1);
+  box-shadow: 0 0 8px 1px rgba(255, 202, 40, 0.35);
+  color: #fffde7; 
+  font-weight: bold;
+}
+
+/* Filter Container */
+#filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#filter-container select {
+  flex: 1;
+  min-width: 130px;
+  padding: 10px;
+  background: #3c3c4a;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+  outline: none;
+}
+
+#btn-reset-filter {
+  flex: 0 0 auto;
+}
+
+/* Farming Elements */
+.farming-desc {
+  font-size: 16px;
+  background: #3c3c4a;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #555;
+}
+
+.farming-actions {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+/* Footer elements */
+.site-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 10px;
+  color: #777;
+  font-size: 12px;
+  border-top: 1px dashed #444;
+  line-height: 1.8;
+}
+
+.footer-link {
+  color: #999;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   6. Modals & Overlays
+   ========================================================================== */
+.modal-overlay,
+.loading-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   backdrop-filter: blur(3px);
+}
+
+.loading-box {
+  background: #2b2b36;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #ffca28;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .modal-box {
@@ -279,113 +473,9 @@ select {
   background: #ffd54f;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  background: #3c3c4a;
-}
-
-th,
-td {
-  padding: 12px;
-  text-align: left;
-  border: 1px solid #555;
-}
-
-th {
-  background-color: #555;
-  color: #ffca28;
-  text-align: center;
-}
-
-.center {
-  text-align: center;
-}
-
-.target-weapon {
-  display: inline-block;
-  background: #4a4a5a;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin: 2px;
-  font-size: 12px;
-  border: 1px solid #777;
-}
-
-#result-tbody tr {
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-#result-tbody tr:hover {
-  background-color: #4a4a5a;
-}
-
-#filter-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-#filter-container select {
-  flex: 1;
-  min-width: 130px;
-  padding: 10px;
-  background: #3c3c4a;
-  color: white;
-  border: 1px solid #555;
-  border-radius: 4px;
-  outline: none;
-}
-
-#btn-reset-filter {
-  flex: 0 0 auto;
-  padding: 10px 20px;
-}
-
-.weapon-card .stats span { display: block; }
-
-.weapon-card, 
-.btn-dungeon, 
-button, 
-select {
-  touch-action: manipulation;
-}
-
-.star-btn { 
-  position: absolute; 
-  bottom: 6px; right: 8px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  user-select: none;
-  z-index: 2; 
-  transition: 0.2s;
-}
-
-.star-badge {
-  background-color: rgba(255, 202, 40, 0.15); 
-  color: #ffca28;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 2px 8px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 202, 40, 0.4);
-  margin: 0;
-}
-
-.target-weapon.starred-glow {
-  border-color: #ffca28;
-  background-color: rgba(255, 202, 40, 0.1);
-  box-shadow: 0 0 8px 1px rgba(255, 202, 40, 0.35);
-  color: #fffde7; 
-  font-weight: bold;
-}
-
-.star-btn.inactive { filter: grayscale(100%) opacity(0.3); }
-.star-btn.active { filter: grayscale(0%) opacity(1); text-shadow: 0 0 5px rgba(255,202,40,0.8); }
-
+/* ==========================================================================
+   7. Media Queries
+   ========================================================================== */
 @media (hover: none) and (pointer: coarse) {
   .weapon-card:hover { transform: none; border-color: #555; }
   .weapon-card.owned:hover { border-color: #4caf50; }
@@ -466,4 +556,3 @@ select {
 
   .btn-danger-outline { width: 100%; padding: 18px; }
 }
-

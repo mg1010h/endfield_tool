@@ -29,6 +29,8 @@
   { "id": 24, "type": "양손검", "name": "모범", "base": "주요 능력치", "extra": "공격력", "skill": "억제", "image": "", "rarity": 6 },
   { "id": 25, "type": "양손검", "name": "과거의 일품", "base": "의지", "extra": "생명력", "skill": "효율", "image": "", "rarity": 6 },
   { "id": 26, "type": "양손검", "name": "분쇄의 군주", "base": "힘", "extra": "치명타 확률", "skill": "분쇄", "image": "", "rarity": 6 },
+  { "id": 63, "type": "양손검", "name": "환상통", "base": "힘", "extra": "오리지늄 아츠 강도", "skill": "억제", "image": "", "rarity": 6 },
+  { "id": 64, "type": "양손검", "name": "적영", "base": "힘", "extra": "공격력", "skill": "기예", "image": "", "rarity": 6 },
 
   { "id": 27, "type": "장병기", "name": "개척자의 이정표", "base": "민첩", "extra": "공격력", "skill": "사기", "image": "", "rarity": 4 },
   { "id": 28, "type": "장병기", "name": "아겔로스 사냥꾼", "base": "의지", "extra": "아츠 피해", "skill": "억제", "image": "", "rarity": 4 },
@@ -38,6 +40,7 @@
   { "id": 32, "type": "장병기", "name": "산의 지배자", "base": "민첩", "extra": "물리 피해", "skill": "효율", "image": "", "rarity": 6 },
   { "id": 33, "type": "장병기", "name": "용사", "base": "민첩", "extra": "물리 피해", "skill": "기예", "image": "", "rarity": 6 },
   { "id": 34, "type": "장병기", "name": "J.E.T.", "base": "주요 능력치", "extra": "공격력", "skill": "억제", "image": "", "rarity": 6 },
+  { "id": 65, "type": "장병기", "name": "등불의 사명", "base": "민첩", "extra": "궁극기 충전 효율", "skill": "효율", "image": "", "rarity": 6 },
 
   { "id": 35, "type": "권총", "name": "하울링 가드", "base": "지능", "extra": "공격력", "skill": "억제", "image": "", "rarity": 4 },
   { "id": 36, "type": "권총", "name": "끝없는 여정", "base": "힘", "extra": "아츠 피해", "skill": "추격", "image": "", "rarity": 4 },

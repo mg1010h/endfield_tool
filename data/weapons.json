@@ -44,6 +44,7 @@
   { "id": 65, "type": "장병기", "name": "등불의 사명", "base": "민첩", "extra": "궁극기 충전 효율", "skill": "효율", "image": "", "rarity": 6 },
   { "id": 67, "type": "장병기", "name": "붉게 물든 가호", "base": "민첩", "extra": "열기 피해", "skill": "흐름", "image": "", "rarity": 6 },
   { "id": 68, "type": "장병기", "name": "전성기", "base": "의지", "extra": "치유 효율", "skill": "추격", "image": "", "rarity": 6 },
+  { "id": 71, "type": "장병기", "name": "찬란한 밤의 데뷔", "base": "의지", "extra": "치유 효율", "skill": "의료", "image": "", "rarity": 6 },
 
   { "id": 35, "type": "권총", "name": "하울링 가드", "base": "지능", "extra": "공격력", "skill": "억제", "image": "", "rarity": 4 },
   { "id": 36, "type": "권총", "name": "끝없는 여정", "base": "힘", "extra": "아츠 피해", "skill": "추격", "image": "", "rarity": 4 },

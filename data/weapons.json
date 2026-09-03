@@ -74,5 +74,7 @@
   { "id": 61, "type": "아츠 유닛", "name": "고독한 나룻배", "base": "의지", "extra": "공격력", "skill": "억제", "image": "", "rarity": 6 },
   { "id": 62, "type": "아츠 유닛", "name": "안개 속 불빛", "base": "의지", "extra": "전기 피해", "skill": "효율", "image": "", "rarity": 6 },
   { "id": 69, "type": "아츠 유닛", "name": "42식·척결", "base": "지능", "extra": "궁극기 충전 효율", "skill": "방출", "image": "", "rarity": 6 },
-  { "id": 70, "type": "아츠 유닛", "name": "공명점", "base": "지능", "extra": "궁극기 충전 효율", "skill": "효율", "image": "", "rarity": 6 }
+  { "id": 70, "type": "아츠 유닛", "name": "공명점", "base": "지능", "extra": "궁극기 충전 효율", "skill": "효율", "image": "", "rarity": 6 },
+  { "id": 72, "type": "아츠 유닛", "name": "추운 밤의 그림자", "base": "민첩", "extra": "공격력", "skill": "방출", "image": "", "rarity": 6 },
+  { "id": 73, "type": "아츠 유닛", "name": "고난의 끝", "base": "민첩", "extra": "자연 피해", "skill": "방출", "image": "", "rarity": 6 }
 ]

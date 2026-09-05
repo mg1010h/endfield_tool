@@ -18,6 +18,7 @@
   { "id": 57, "type": "한손검", "name": "찬란했던 기억", "base": "민첩", "extra": "치명타 확률", "skill": "어둠", "image": "", "rarity": 6 },
   { "id": 60, "type": "한손검", "name": "늑대의 혈흔", "base": "민첩", "extra": "치명타 확률", "skill": "골절", "image": "", "rarity": 6 },
   { "id": 66, "type": "한손검", "name": "조망", "base": "주요 능력치", "extra": "오리지늄 아츠 강도", "skill": "강공", "image": "", "rarity": 6 },
+  { "id": 74, "type": "한손검", "name": "간식시간", "base": "힘", "extra": "치유 효율", "skill": "의료", "image": "", "rarity": 6 },
 
   { "id": 16, "type": "양손검", "name": "공업 0.1", "base": "힘", "extra": "공격력", "skill": "억제", "image": "", "rarity": 4 },
   { "id": 17, "type": "양손검", "name": "불꽃의 시험", "base": "의지", "extra": "생명력", "skill": "분쇄", "image": "", "rarity": 4 },

@@ -35,7 +35,7 @@
   { "id": 63, "type": "양손검", "name": "환상통", "base": "힘", "extra": "오리지늄 아츠 강도", "skill": "억제", "image": "", "rarity": 6 },
   { "id": 64, "type": "양손검", "name": "적영", "base": "힘", "extra": "공격력", "skill": "기예", "image": "", "rarity": 6 },
   { "id": 76, "type": "양손검", "name": "옥에 깃든 형체", "base": "지능", "extra": "냉기 피해", "skill": "효율", "image": "", "rarity": 6 },
-  { "id": 77, "type": "양손검", "name": "적영", "base": "지능", "extra": "냉기 피해", "skill": "효율", "image": "", "rarity": 6 },
+  { "id": 77, "type": "양손검", "name": "유구한 전승", "base": "지능", "extra": "냉기 피해", "skill": "효율", "image": "", "rarity": 6 },
 
   { "id": 27, "type": "장병기", "name": "개척자의 이정표", "base": "민첩", "extra": "공격력", "skill": "사기", "image": "", "rarity": 4 },
   { "id": 28, "type": "장병기", "name": "아겔로스 사냥꾼", "base": "의지", "extra": "아츠 피해", "skill": "억제", "image": "", "rarity": 4 },
